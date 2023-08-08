@@ -4,14 +4,14 @@ const loader = document.getElementById('loader');
 let photosArray = [];
 
 //Unsplash API
-const count = 10;
+const count = 30;
 const apiKey = 'MlgAA905b1qqyYhzEjmFm8h1DUehjQXS703pUV9qy20';
-const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
-// const apiUrl = `https://api.unsplash.com/search/collections?page=1&query=motivational_quotes&client_id=${apiKey}&count=${count}`;
+// const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
+const apiUrl = `https://api.unsplash.com/search/photos?per_page=${count}&query=motivational-quotes&client_id=${apiKey}`;
 
 //Create Elements for Links & Photos, Add to DOM
 function displayPhotos() {
-    photosArray.forEach(photo => {
+    photosArray.results.forEach(photo => {
         //Create <a> to link to Unsplash
         const item = document.createElement('a');
         item.setAttribute('href', photo.links.html);
@@ -27,13 +27,12 @@ function displayPhotos() {
     });  
 }
 
-
 //Get photos from Unsplash API
 async function getPhotos() {
     try {
         const response = await fetch(apiUrl);
         photosArray = await response.json();
-        // console.log(photosArray);
+        console.log(photosArray.results);
         displayPhotos();
     } catch (error) {
         //Catch error here
