@@ -1,5 +1,6 @@
 const imageContainer = document.getElementById('img-container');
 const loader = document.getElementById('loader');
+document.body.style.backgroundColor = 'whitesmoke';
 
 let ready = false;
 let imagesLoaded = 0;
@@ -63,7 +64,7 @@ function displayPhotos() {
     });  
 }
 
-//Get photos from Unsplash API
+// Get photos from Unsplash API
 async function getPhotos() {
     try {
         let response = await fetch(apiUrl);
@@ -91,6 +92,34 @@ window.addEventListener('scroll', () => {
         getPhotos();
     }
 })
+
+
+function changeModeSetting() {
+    let lightbulb = document.getElementById('lightbulb');
+    let header = document.getElementById('header');
+    let background = document.body.style.backgroundColor;
+    let tooltipText = document.getElementById('tooltiptext');
+
+    if(background === 'whitesmoke') {
+        document.body.style.backgroundColor = 'black';
+        header.style.color = 'white';
+        lightbulb.classList.remove('fa-solid');
+        lightbulb.classList.add('fa-regular');
+        lightbulb.style.color = 'white';
+        tooltipText.innerHTML = 'Light Mode';
+    } else {
+        document.body.style.backgroundColor = 'whitesmoke';
+        header.style.color = 'black';
+        lightbulb.classList.remove('fa-regular');
+        lightbulb.classList.add('fa-solid');
+        lightbulb.style.color = 'black';
+        tooltipText.innerHTML = 'Dark Mode';
+    }
+}
+
+//Toggle between dark mode and light mode
+const bulbDiv = document.getElementById('bulbDiv');
+bulbDiv.addEventListener('click', changeModeSetting);
 
 //On load
 getPhotos();
