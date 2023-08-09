@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infinite Scroll</title>
     <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=shandiraferguson.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Title -->
-    <h1>Elevate Your Hustle: Infinite Motivation Feed for the Mind, Body, & Soul</h1>
+    <div class="title">
+        <!-- Title -->
+        <h1>Elevate Your Hustle: Infinite Motivation Feed for the Mind, Body, & Soul </h1>
+        <div class="tooltip" id="bulb">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span class="tooltiptext">Dark mode</span>
+        </div>
+    </div>
     <!-- Loader -->
-    <div class="loader" id="loader">
+    <div class="loader" id="loader" hidden>
         <img src="loader.svg" alt="Loading">
     </div>
     <!-- Image Container -->
     <div class="img-container" id="img-container"></div>
     <!-- Script -->
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
