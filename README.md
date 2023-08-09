@@ -9,3 +9,7 @@ Surround yourself with positivity and let the synergy of inspiring quotes and st
 > 🌞 Light Mode: Embrace the brightness of your aspirations with light mode, perfect for the high-energy moments of your journey.
 > 
 > 🌙 Dark Mode: When the hustle goes into overdrive during those late-night brainstorming sessions, switch to dark mode for a sleek, focused ambiance that keeps your vision sharp.
+
+## Languages
+
+> </> HTML, CSS, JS
