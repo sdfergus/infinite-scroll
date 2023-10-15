@@ -1,4 +1,4 @@
-# The Inspirational Hub 🚀
+# MotivationX 🚀
 
 Surround yourself with positivity and let the synergy of inspiring quotes and stunning visuals power your path to success.  Seamlessly scroll through an endless stream of motivational quotes and captivating images, all generated through an API call to Unsplash.com. These images not only serve as visual motivation but also provide a direct link to the Unsplash website. Click on each image to explore it on Unsplash, where you're free to download, like, or add it to your own collection.
 
